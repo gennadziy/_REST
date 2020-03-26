@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Added</title>
+</head>
+<body>
+<form  th:action="@{/save}" th:object="${autoss}"   method="post">
+    <div class="form-group col-md-8">
+        <input type="text"  id="name" th:name="name" th:value="HENADZ" placeholder="Enter your name."   />
+    </div>
+    <div class="form-group">
+        <input type="date" id="date" th:name="date" th:value="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" />
+    </div>
+    <button type="submit" >Add</button>
+</form>
+
+
+</body>
+</html>
